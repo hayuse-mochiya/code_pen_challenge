@@ -1,0 +1,96 @@
+body {
+    // background-color: #3d3d3d;
+    height: 100vh;
+    position: relative;
+    padding: 16px 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.p-card {
+    display: inline-block;
+    width: 300px;
+    background: #fefefe;
+    border: 1px solid #000;
+    padding: 10px;
+    &__header {
+        display: flex;
+        column-gap: 4px;
+        align-items: center;
+        & > h3 {
+            margin: 0;
+        }
+        &-sub-title {
+            font-size: 11px;
+        }
+        &-icon {
+            margin-left: auto;
+        }
+    }
+}
+
+.p-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    gap: 4px;
+    padding: 10px 10px;
+}
+.c-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #dedede;
+    border-radius: 5px;
+}
+
+.p-scroll {
+    height: 100%;
+    width: 100%;
+    &__main {
+        height: calc(100% - 48px);
+        display: flex;
+        gap: 16px;
+        width: max-content;
+        & > div {
+            height: 100%;
+            flex-shrink: 0;
+        }
+    }
+    &__wrapper {
+        display: flex; // flex-box
+        flex-direction: column; // 縦並び
+        height: 100%; // 縦幅MAX
+
+        overflow: auto;
+        width: 300px;
+        border-radius: 5px;
+        background-color: #dedede;
+        padding: 10px;
+        box-shadow: 1px 1px 10px #dedede;
+        box-sizing: border-box;
+    }
+    &__content {
+        height: 100%; // 縦幅MAX
+        overflow-y: auto; // スクロール挙動
+        
+        & > ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+    }
+    & > h1 {
+        width: 100%;
+        margin: 0;
+        flex-basis: auto;
+    }
+    &__header {
+        & > h3 {
+            margin: 0;
+        }
+    }
+}
