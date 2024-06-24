@@ -13,7 +13,11 @@ const titleData = [
     },
     {
         class: 'js-title-2',
-        logo: 'https://lottie.host/fe19e5b1-96f6-4ff1-a74a-6d96ded01bde/FYZjndTMH6.json' ,
+        logo: 'https://lottie.host/b05dcea8-b4c2-4b91-9de5-3d903c07940a/kepiEk8xzj.json' ,
+    },
+    {
+        class: 'js-title-3',
+        logo: 'https://lottie.host/265f5cd6-0d0c-42b3-9ae6-a6919eeb9297/GslZuGRsk7.json' ,
     }
 ]
 
@@ -47,6 +51,8 @@ const handleWheelEvent = (event: WheelEvent): void => {
     // console.log(event.deltaY, '|||||', currentSection);
     currentSection += event.deltaY;
     if (currentSection < 0) currentSection = 0;
+    if (currentSection > 4500) currentSection = 4500;
+    // if (currentSection > 0) currentSection = 0;
 
     window.scrollTo({ left: currentSection });
     // currentSection = currentSection + event.deltaY;

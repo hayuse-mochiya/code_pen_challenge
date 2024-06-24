@@ -16,6 +16,15 @@ body, html {
     animation: rotate 30s infinite;
     flex-shrink: 0;
     position: relative;
+    &__title {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        translate: -50% -50%;
+        transform: translate3d(0, 0, 600px);
+        opacity: 0.8;
+        display: none;
+    }
     &__bg {
         position: absolute;
         top: 0;
@@ -27,6 +36,8 @@ body, html {
         align-items: center;
         justify-content: center;
         & > img {
+            width: 100%;
+            height: 100%;
         }
         &::after {
             content: "";
@@ -108,14 +119,19 @@ body, html {
             transform: translate3d(0, 0, 2000px);
         }
     }
-    &__title {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        translate: -50% -50%;
-        transform: translate3d(0, 0, 600px);
-        opacity: 0.8;
-        display: none;
+    &__3 {
+        .p-page__title {
+            left: 0;
+            top: 5%;
+            translate: 0 0;
+            opacity: 1;
+        }
+    }
+    &__4 {
+        .p-page__title {
+            opacity: 1;
+            // mix-blend-mode: color-burn;
+        }
     }
 }
 
